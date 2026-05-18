@@ -26,7 +26,7 @@ test('Successful login', async ({ page }) => {
 test('Successful login_Shorter', async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage();
-    await loginPage.Login();
+    await loginPage.login();
    
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 });

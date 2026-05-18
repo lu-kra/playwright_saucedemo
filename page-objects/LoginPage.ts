@@ -49,7 +49,7 @@ export class LoginPage {
         await this.loginButton.click();
     }
     
-    async Login() {
+    async login() {
         await this.userNameInput.fill('standard_user');
         await this.passwordInput.fill('secret_sauce');
         await this.loginButton.click();

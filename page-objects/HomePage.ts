@@ -6,6 +6,8 @@ export class HomePage {
     title: Locator;
     item: Locator;
     addToCartButton: Locator;
+    cartBadge: Locator;
+    removeFromCartButton: Locator;
 
 
     constructor(page: Page) {
@@ -13,7 +15,9 @@ export class HomePage {
         this.menu = page.locator('#react-burger-menu-btn');
         this.title = page.getByText('Swag Labs');
         this.item = page.locator('#item_4_title_link');
-        this.addToCartButton = page.locator('#add-to-cart');
+        this.addToCartButton = page.locator('#add-to-cart-sauce-labs-backpack');
+        this.cartBadge = page.locator('//span[@class="shopping_cart_badge"]');
+        this.removeFromCartButton = page.locator('#remove-sauce-labs-backpack');
     }
 
 
@@ -28,10 +32,10 @@ export class HomePage {
        async clickOnAddToCart() {
         await this.addToCartButton.click();
     }
-   
-    
-    
- 
+
+    async clickOnRemoveFromCart() {
+        await this.removeFromCartButton.click();
+    }
 
 
 
