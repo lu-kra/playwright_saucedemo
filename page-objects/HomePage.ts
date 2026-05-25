@@ -8,6 +8,7 @@ export class HomePage {
     addToCartButton: Locator;
     cartBadge: Locator;
     removeFromCartButton: Locator;
+    backToProductsButton: Locator;
 
 
     constructor(page: Page) {
@@ -18,6 +19,7 @@ export class HomePage {
         this.addToCartButton = page.locator('#add-to-cart-sauce-labs-backpack');
         this.cartBadge = page.locator('//span[@class="shopping_cart_badge"]');
         this.removeFromCartButton = page.locator('#remove-sauce-labs-backpack');
+        this.backToProductsButton = page.locator('#back-to-products');
     }
 
 
@@ -28,7 +30,7 @@ export class HomePage {
      async clickOnItem() {
         await this.item.click();
     }
-
+    
        async clickOnAddToCart() {
         await this.addToCartButton.click();
     }
@@ -37,7 +39,9 @@ export class HomePage {
         await this.removeFromCartButton.click();
     }
 
-
+    async clickOnBackToProducts() {
+        await this.backToProductsButton.click();
+    }
 
 
 

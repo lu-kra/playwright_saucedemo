@@ -35,4 +35,14 @@ test('Remove item from cart', async ({ page }) => {
     await expect(homePage.cartBadge).not.toBeVisible();
 });
 
+test('Go back to products', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    const homePage = new HomePage(page);
+    await loginPage.gotoLoginPage();
+    await loginPage.login();
+    await homePage.clickOnItem();
+
+    await homePage.clickOnBackToProducts();
+    await expect(homePage.title).toBeVisible();
+});
 
