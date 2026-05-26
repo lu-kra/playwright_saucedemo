@@ -1,21 +1,23 @@
-import { test, expect } from '@playwright/test';
-import  { HomePage } from '../page-objects/HomePage';
-import { LoginPage } from '../page-objects/LoginPage';
+// import { test, expect } from '@playwright/test';
+// import  { HomePage } from '../page-objects/HomePage';
+// import { LoginPage } from '../page-objects/LoginPage';
+
+import test, { expect } from '../fixtures/basePages';
 
 
 
-test('Verify home title', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const homePage = new HomePage(page);
+test('Verify home title', async ({ page, loginPage, homePage }) => {
+    // const loginPage = new LoginPage(page);
+    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
    
     await expect(homePage.title).toBeVisible();
 });
 
-test('Verify add to cart functionality', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const homePage = new HomePage(page);
+test('Verify add to cart functionality', async ({ page, loginPage, homePage }) => {
+    // const loginPage = new LoginPage(page);
+    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
     await homePage.clickOnAddToCart();
@@ -23,9 +25,9 @@ test('Verify add to cart functionality', async ({ page }) => {
     await expect(homePage.cartBadge).toHaveText("1");  
 });
 
-test('Remove item from cart', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const homePage = new HomePage(page);
+test('Remove item from cart', async ({ page, loginPage, homePage  }) => {
+    // const loginPage = new LoginPage(page);
+    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
     await homePage.clickOnAddToCart();
@@ -35,9 +37,9 @@ test('Remove item from cart', async ({ page }) => {
     await expect(homePage.cartBadge).not.toBeVisible();
 });
 
-test('Go back to products', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const homePage = new HomePage(page);
+test('Go back to products', async ({ page, loginPage, homePage }) => {
+    // const loginPage = new LoginPage(page);
+    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
     await homePage.clickOnItem();
