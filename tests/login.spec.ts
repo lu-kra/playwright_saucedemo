@@ -1,26 +1,6 @@
-// removed due to importing from fixtures/basePages
-
-// import { test, expect } from '@playwright/test';
-// import  { LoginPage } from '../page-objects/LoginPage';
-
 import test, { expect } from '../fixtures/basePages';
 
-
-
-
-// test('Successful login', async ({ page }) => {
-//   await page.goto('https://www.saucedemo.com/');
-//   await page.locator('[data-test="username"]').click();
-//   await page.locator('[data-test="username"]').fill('standard_user');
-//   await page.locator('[data-test="password"]').click();
-//   await page.locator('[data-test="password"]').fill('secret_sauce');
-//   await page.locator('[data-test="login-button"]').click();
-//   await expect(page.getByText('Swag Labs')).toBeVisible();
-// });
-
-
 test('Successful login', async ({ page, loginPage }) => {
-    // const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage();
     await loginPage.enterValidUsername();
     await loginPage.enterValidPassword();
@@ -30,7 +10,6 @@ test('Successful login', async ({ page, loginPage }) => {
 });
 
 test('Successful login_Shorter', async ({ page, loginPage }) => {
-    // const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
    
@@ -38,7 +17,6 @@ test('Successful login_Shorter', async ({ page, loginPage }) => {
 });
 
 test('Cannot login with valid username and invalid password', async ({ page, loginPage }) => {
-    // const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage();
     await loginPage.enterValidUsername();
     await loginPage.enterInvalidPassword();
@@ -48,7 +26,6 @@ test('Cannot login with valid username and invalid password', async ({ page, log
 });
 
 test('Cannot login with invalid username and valid password', async ({ page, loginPage }) => {
-    // const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage();
     await loginPage.enterInvalidUsername();
     await loginPage.enterValidPassword();
@@ -58,7 +35,6 @@ test('Cannot login with invalid username and valid password', async ({ page, log
 });
 
 test('Cannot login with blank fields', async ({ page, loginPage }) => {
-    // const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage();
     await loginPage.clickLoginButton();
 
@@ -66,7 +42,6 @@ test('Cannot login with blank fields', async ({ page, loginPage }) => {
 });
 
 test('Cannot login with locked out user', async ({ page, loginPage   }) => {
-    // const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage();
     await loginPage.enterLockedOutUser();
     await loginPage.enterValidPassword();

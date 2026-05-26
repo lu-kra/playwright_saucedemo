@@ -1,14 +1,8 @@
-// import { test, expect } from '@playwright/test';
-// import  { HomePage } from '../page-objects/HomePage';
-// import { LoginPage } from '../page-objects/LoginPage';
-
 import test, { expect } from '../fixtures/basePages';
 
 
 
 test('Verify home title', async ({ page, loginPage, homePage }) => {
-    // const loginPage = new LoginPage(page);
-    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
    
@@ -16,8 +10,6 @@ test('Verify home title', async ({ page, loginPage, homePage }) => {
 });
 
 test('Verify add to cart functionality', async ({ page, loginPage, homePage }) => {
-    // const loginPage = new LoginPage(page);
-    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
     await homePage.clickOnAddToCart();
@@ -26,8 +18,6 @@ test('Verify add to cart functionality', async ({ page, loginPage, homePage }) =
 });
 
 test('Remove item from cart', async ({ page, loginPage, homePage  }) => {
-    // const loginPage = new LoginPage(page);
-    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
     await homePage.clickOnAddToCart();
@@ -38,8 +28,6 @@ test('Remove item from cart', async ({ page, loginPage, homePage  }) => {
 });
 
 test('Go back to products', async ({ page, loginPage, homePage }) => {
-    // const loginPage = new LoginPage(page);
-    // const homePage = new HomePage(page);
     await loginPage.gotoLoginPage();
     await loginPage.login();
     await homePage.clickOnItem();
