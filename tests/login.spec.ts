@@ -31,7 +31,7 @@ test.describe('Login Tests', () => {
             await loginPage.enterInvalidPassword();
         });
         await test.step('Click login button', async () => {
-            // await loginPage.clickLoginButton();
+            await loginPage.clickLoginButton();
         });
          await test.step('Verify error message is visible', async () => {
             await expect(loginPage.invalidCredentialErrorMessage, 'Invalid credential error message is not visible').toBeVisible();
