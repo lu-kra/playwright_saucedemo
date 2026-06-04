@@ -1,0 +1,135 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.2.681154078.1780584671",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1815144670.644965,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.1039716238.1780584671",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1780671070,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_UA-109033876-1",
+      "value": "1",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1780584730,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "uid",
+      "value": "18b464fd-7379-4990-a5f3-b084788db9db",
+      "domain": ".criteo.com",
+      "path": "/",
+      "expires": 1814280670.839096,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "d854ff82-6092-4878-bb0f-cc2c4883e009|1780584671",
+      "domain": ".openx.net",
+      "path": "/",
+      "expires": 1812120670.855191,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__eoi",
+      "value": "ID=96e6f9ce214a4dd6:T=1780584671:RT=1780584671:S=AA-AfjZBpqFX-g8IGJbbwPRI0n1s",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1796136671,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Imx1a2FzIiwicGFzc3dvcmQiOiJQQHN3b3JkMTIzNCIsImlhdCI6MTc4MDU4NDY3MX0.J7CcNd1cU5tzm1OunGvPcbRbHaTqpSUl4bO8SyFOpJU",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "expires",
+      "value": "2026-06-11T14%3A51%3A11.155Z",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "userID",
+      "value": "553dd5b2-6941-4a74-9465-5cb3d6c5c70d",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "userName",
+      "value": "lukas",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://demoqa.com",
+      "localStorage": [
+        {
+          "name": "_GESPSK-pubcid.org",
+          "value": "[\"pubcid.org\",null,1780584670616,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "_GESPSK-crwdcntrl.net",
+          "value": "[\"crwdcntrl.net\",null,1780584670616,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "_GESPSK-openx",
+          "value": "[\"openx\",\"eyJpIjoiMkZUL2dtQ1NTSGk3RDh3c1NJUGdDUT09In0=\",1780584670982,null,null,null,null,null,0]"
+        },
+        {
+          "name": "_GESPSK-id5-sync.com",
+          "value": "[\"id5-sync.com\",null,1780584670767,null,null,null,null,null,0,[106]]"
+        },
+        {
+          "name": "_GESPSK-esp.criteo.com",
+          "value": "[\"esp.criteo.com\",null,1780584670616,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "_GESPSK-rtbhouse",
+          "value": "[\"rtbhouse\",null,1780584670705,null,null,null,null,null,0,[106]]"
+        }
+      ]
+    }
+  ]
+}
