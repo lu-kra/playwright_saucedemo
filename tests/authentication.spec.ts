@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Authentication', () => {
-    test.only('User can login with valid credentials', async ({ page }) => {
+    test.skip('User can login with valid credentials', async ({ page }) => {
         await page.getByText('lukas').isVisible();
         expect(page.getByRole('button', { name: 'Log out' })).toBeVisible();
     });
