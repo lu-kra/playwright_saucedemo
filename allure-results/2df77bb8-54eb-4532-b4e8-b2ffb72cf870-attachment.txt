@@ -1,0 +1,1 @@
+{"firstname":"Susanai","lastname":"Wilson","totalprice":854,"depositpaid":false,"bookingdates":{"checkin":"2022-05-31","checkout":"2023-09-27"},"additionalneeds":"Breakfast"}

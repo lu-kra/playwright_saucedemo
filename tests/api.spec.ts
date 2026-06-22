@@ -6,9 +6,10 @@ test.describe('API Tests', () => {
     const randomFirstName = faker.person.firstName();
     const randomLastName = faker.person.lastName();
     const randomNumber = faker.number.int({ min: 10, max: 100 });
+    var token = '';
 
-    test.skip('GET request @api', async ({ request }) => {
-        const response = await request.get('https://restful-booker.herokuapp.com/booking');
+    test('GET request @api', async ({ request }) => {
+        const response = await request.get('https://restful-booker.herokuapp.com/booking/2');
         expect(response.status()).toBe(200);
 
         const responseBody = await response.json();
@@ -54,7 +55,7 @@ test.describe('API Tests', () => {
     });
 
 
- test.only('POST request - dynamic data @api', async ({ request }) => {
+ test('POST request - dynamic data @api', async ({ request }) => {
         const response = await request.post('/booking', {
             data: {
                 "firstname" : randomFirstName,
@@ -80,8 +81,40 @@ test.describe('API Tests', () => {
     });
 
 
+    test.only('PUT request - update booking @api', async ({ request }) => {
+        const response = await request.post('/auth', {
+            data: {
+                "username" : "admin",
+                "password" : "password123"
+            }
+        });
+        console.log(await response.json());
+        expect(response.ok()).toBeTruthy();
+        expect(response.status()).toBe(200);
 
+        const responseBody = await response.json();
+        token = responseBody.token;
+        console.log('New token is: ' + token);
 
+        const updateRequest = await request.put('/booking/2', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Cookie': `token=${token}`,
+            },
+            data: {
+                "firstname" : randomFirstName,
+                "lastname" : randomLastName,
+                "totalprice" : randomNumber,
+                "depositpaid" : true,
+                "bookingdates" : {
+                    "checkin" : "2026-05-06",
+                    "checkout" : "2026-05-09"
+                },
+                "additionalneeds" : "Breakfast"
+            }
+        });     
+        console.log(await updateRequest.json());
 
-
+    });
 });

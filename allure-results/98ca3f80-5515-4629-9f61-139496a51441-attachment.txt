@@ -1,0 +1,10 @@
+{ token: '0cfc2b46e28f988' }
+New token is: 0cfc2b46e28f988
+{
+  firstname: 'Kip',
+  lastname: 'Rau',
+  totalprice: 76,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-05-06', checkout: '2026-05-09' },
+  additionalneeds: 'Breakfast'
+}
