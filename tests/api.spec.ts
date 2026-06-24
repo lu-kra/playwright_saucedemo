@@ -18,7 +18,7 @@ test.describe('API Tests', () => {
 
 
  test('GET request with parameters @api', async ({ request }) => {
-        const response = await request.get('/booking', {
+        const response = await request.get('/booking/2', {
             params: {
                 firstname: 'Jane',
                 lastname: 'Doe'
@@ -56,7 +56,7 @@ test.describe('API Tests', () => {
 
 
  test('POST request - dynamic data @api', async ({ request }) => {
-        const response = await request.post('/booking', {
+        const response = await request.post('/booking/2', {
             data: {
                 "firstname" : randomFirstName,
                 "lastname" : randomLastName,
@@ -81,7 +81,7 @@ test.describe('API Tests', () => {
     });
 
 
-    test.only('PUT request - update booking @api', async ({ request }) => {
+    test('PUT request - update booking @api', async ({ request }) => {
         const response = await request.post('/auth', {
             data: {
                 "username" : "admin",
@@ -114,7 +114,49 @@ test.describe('API Tests', () => {
                 "additionalneeds" : "Breakfast"
             }
         });     
-        console.log(await updateRequest.json());
+        console.log(await updateRequest.text());
+        expect(updateRequest.ok()).toBeTruthy();
+        expect(updateRequest.status()).toBe(200);
+
+        const updatedResponseBody = await updateRequest.json();
+        console.log('Updated booking details: ' + JSON.stringify(updatedResponseBody));
+        expect(updatedResponseBody).toHaveProperty('firstname', randomFirstName);
+        expect(updatedResponseBody).toHaveProperty('lastname', randomLastName);
+        expect(updatedResponseBody).toHaveProperty('totalprice', randomNumber);
+        expect(updatedResponseBody).toHaveProperty('depositpaid', true);
 
     });
+
+
+    test.only('DELETE request - delete booking @api', async ({ request }) => {
+        const response = await request.post('/auth', {
+            data: {
+                "username" : "admin",
+                "password" : "password123"
+            }
+        });
+        console.log(await response.json());
+        expect(response.ok()).toBeTruthy();
+        expect(response.status()).toBe(200);
+
+        const responseBody = await response.json();
+        token = responseBody.token;
+        console.log('New token is: ' + token);
+
+
+        const deleteRequest = await request.delete('/booking/2', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Cookie': `token=${token}`,
+            }
+        });
+
+        console.log(await deleteRequest.text());
+        expect(deleteRequest.status()).toBe(201);
+        expect(deleteRequest.statusText()).toBe("Created");
+
+    });
+
+
 });

@@ -1,0 +1,8 @@
+{
+  firstname: 'Mark',
+  lastname: 'Smith',
+  totalprice: 298,
+  depositpaid: false,
+  bookingdates: { checkin: '2018-07-03', checkout: '2021-02-15' },
+  additionalneeds: 'Breakfast'
+}

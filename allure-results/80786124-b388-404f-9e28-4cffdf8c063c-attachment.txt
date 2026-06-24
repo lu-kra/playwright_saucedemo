@@ -1,0 +1,2 @@
+{ token: '5891e74573bcfaf' }
+New token is: 5891e74573bcfaf

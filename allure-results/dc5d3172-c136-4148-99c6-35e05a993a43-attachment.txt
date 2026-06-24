@@ -1,0 +1,11 @@
+{
+  bookingid: 2691,
+  booking: {
+    firstname: 'Francesca',
+    lastname: 'Nolan',
+    totalprice: 70,
+    depositpaid: true,
+    bookingdates: { checkin: '2026-05-06', checkout: '2026-05-09' },
+    additionalneeds: 'Breakfast, Lunch'
+  }
+}

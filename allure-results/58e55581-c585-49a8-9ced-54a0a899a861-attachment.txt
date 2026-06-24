@@ -1,0 +1,11 @@
+{ token: 'a932701348e80db' }
+New token is: a932701348e80db
+{
+  firstname: 'Cedrick',
+  lastname: 'Lakin',
+  totalprice: 39,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-05-06', checkout: '2026-05-09' },
+  additionalneeds: 'Breakfast'
+}
+Updated booking details: {"firstname":"Cedrick","lastname":"Lakin","totalprice":39,"depositpaid":true,"bookingdates":{"checkin":"2026-05-06","checkout":"2026-05-09"},"additionalneeds":"Breakfast"}
