@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "allTests": "playwright test",
-    "test:api": "playwright test --config=api.config.ts --project=chromium --grep=@api"
+    "test:api": "playwright test --config=api.config.ts --project=chromium --grep=@api --debug"
   },
   "keywords": [],
   "author": "",

@@ -128,7 +128,7 @@ test.describe('API Tests', () => {
     });
 
 
-    test.only('DELETE request - delete booking @api', async ({ request }) => {
+    test('DELETE request - delete booking @api', async ({ request }) => {
         const response = await request.post('/auth', {
             data: {
                 "username" : "admin",
@@ -157,6 +157,19 @@ test.describe('API Tests', () => {
         expect(deleteRequest.statusText()).toBe("Created");
 
     });
+
+
+
+    test.only('Block request @api', async ({ page, context }) => {
+
+        await context.route(/\.(jpg|png)$/, route => route.abort());
+        await page.goto('/');
+        await page.waitForURL('/');
+
+    });
+
+
+
 
 
 });

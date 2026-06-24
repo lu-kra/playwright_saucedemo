@@ -1,0 +1,3 @@
+{ token: '3444cbb1df9881e' }
+New token is: 3444cbb1df9881e
+Created

@@ -1,0 +1,3 @@
+{ token: 'aa8e76301213c84' }
+New token is: aa8e76301213c84
+Method Not Allowed
